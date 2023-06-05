@@ -8,7 +8,7 @@
     <title>Document</title>
 </head>
 <?php
-
+require_once 'lib.inc.php';
 // Appel du bloc Header et du Menu>
 require("header.inc.php");
 ?>
