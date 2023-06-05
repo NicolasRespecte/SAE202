@@ -1,6 +1,3 @@
-<?php
-require_once 'lib.inc.php'
-?>
 <header>
     <nav>
         <ul>
@@ -13,13 +10,14 @@ require_once 'lib.inc.php'
             </ul>
                 </nav>
                 <?php
-            if (!empty($_SESSION['prenom_client'])){
-                echo 'Bonjour, <a href="profil.php">'.$_SESSION['prenom_client'].'</a>';
-                echo '<a class="deco" href="deconnexion.php">Deconnexion</a>';
-            } else { 
-                echo '<a href="user/formConnexion.php">Connexion</a>/<a href="user/formInscription.php">Inscription</a>';
-            }
-        ?>     
+ 
+                    if (isset($_SESSION['prenom_usager'])){
+                    echo 'Bienvenue '.$_SESSION['prenom_usager'].' / ';
+                    echo '<a href="deconnexion.php">Déconnexion</a>';
+                    } else {
+                        echo '<a href="formConnexion.php">Connexion</a> / ';
+                        echo '<a href="formInscription.php">Inscription</a>';
+                    } 
         
-     
+     ?>
 </header>
