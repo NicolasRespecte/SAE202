@@ -23,7 +23,7 @@ function afficherTrajet($mabd){
         $lignes_resultat = $resultat->rowCount();
         if ($lignes_resultat > 0) {
         while($ligne = $resultat->fetch(PDO::FETCH_ASSOC)){
-        echo ''
+        echo '';
         }
      }else {
         echo '<p>Pas de résultat</p>';
