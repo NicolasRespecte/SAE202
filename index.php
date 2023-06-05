@@ -11,9 +11,9 @@
 
 // Appel du bloc Header et du Menu>
 require("header.inc.php");
-
 ?>
 <body>
+<h1>co</h1>
     
 </body>
 </html>
