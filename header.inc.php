@@ -3,10 +3,7 @@
         <ul>
             <li>
                 <a href="index.php">
-                    <img src="https://img2.freepng.fr/20180714/hxu/kisspng-user-profile-computer-icons-login-clip-art-profile-picture-icon-5b49de2f52aa71.9002514115315676633386.jpg" alt="">
-                </a>
-                <a href="index.php">
-                    <h2>coucou</h2>
+                    <img src="assets/imgs/logo.png" alt="">
                 </a>
             </li>
             <li>
