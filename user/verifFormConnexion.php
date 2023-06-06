@@ -1,5 +1,7 @@
 <?php
 require_once '../lib.inc.php';
+?>
+<?php
 $email=$_POST['email'];
 $mdp=$_POST['mdp'];
 $mabd=connexionBD();
@@ -25,3 +27,4 @@ if ($lignes_resultat>0) { // y a-t-il des résultats ?
     header('Location: ../formConnexion.php');
 }
 deconnexionBD($mabd);
+?>
