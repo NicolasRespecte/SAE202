@@ -13,12 +13,10 @@ header{
     background-color: #9CA777;
 }
 nav ul{
-    width: 100vw;
+    width: 95vw;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-left: 25px;
-    padding-right: 25px;
 }
 nav li{
     display: flex;
@@ -32,9 +30,12 @@ nav li a{
     color: white;
     text-decoration: none;
     font-size: 19px;
+    font-weight: ;
+    font-family: 'Biryani', sans-serif;
 }
 nav li a img{
-    width: 50px;
+    margin-top: 6px;
+    height: 30px;
 }
 .navmain{
     display: flex;
