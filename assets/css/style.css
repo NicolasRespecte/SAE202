@@ -8,21 +8,33 @@ header{
     justify-content: center;
     align-items: center;
     width: 100vw;
-    height: 85px;
+    height: 60px;
     background-color: #181818;
 }
 nav ul{
-    width: 900px;
+    width: 100vw;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
+    padding-left: 25px;
+    padding-right: 25px;
 }
 nav li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     list-style: none;
+    gap: 10px;
+    width: 200px;
 }
 nav li a{
     color: white;
 }
 nav li a img{
     width: 50px;
+}
+.navmain{
+    display: flex;
+    justify-content: center;
+    gap: 35px;
 }
