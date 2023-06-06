@@ -2,6 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: 'Montserrat', sans-serif;
 }
 header{
     display: flex;
@@ -9,7 +10,7 @@ header{
     align-items: center;
     width: 100vw;
     height: 60px;
-    background-color: #181818;
+    background-color: #9CA777;
 }
 nav ul{
     width: 100vw;
@@ -29,6 +30,8 @@ nav li{
 }
 nav li a{
     color: white;
+    text-decoration: none;
+    font-size: 19px;
 }
 nav li a img{
     width: 50px;
@@ -36,5 +39,53 @@ nav li a img{
 .navmain{
     display: flex;
     justify-content: center;
-    gap: 35px;
+    gap: 40px;
+}
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+h1{
+    padding: 50px;
+    font-size: 40px;
+    font-weight: 700;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    gap: 50px;
+    align-items: center;
+}
+.champ{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.champ input{
+    margin-left: 10px;
+    background-color: transparent;
+    border: none;
+    font-size: 16px;
+    font-weight: 500;
+}
+#env{
+    width: 200px;
+    border: none;
+    height: 50px;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: bold;
+}
+label{
+    margin-bottom: 14px;
+    font-size: 12px;
+    font-weight: 600;
+}
+.ligne{
+    margin-top: 10px;
+    border-top: 1px solid #181818;
+    height: 2px; 
 }

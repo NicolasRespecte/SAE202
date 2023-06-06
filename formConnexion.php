@@ -1,13 +1,25 @@
 <?php require 'debut.php'; require_once 'lib.inc.php';?>
 <?php require 'header.inc.php' ?>
 
+<main>
 <h1>Connexion</h1>
 
-<form action="user/verifFormConnexion.php" method="post"> 
-        Adresse e-mail : <input type="text" name="email" /><br />  
-        Mot de passe : <input type="password" name="mdp" /><br />  
-        <input type="submit" value="Envoyer"> 
-    </form> 
+
+<form action="user/verifFormConnexion.php" method="post">
+
+    <div class="champ">
+        <label for="email">Email</label>
+            <input type="text" name="email" placeholder="Email" required="" />
+        <span class="ligne"></span>
+    </div>
+
+    <div class="champ">
+        <label for="password">Mot de passe</label>
+            <input type="password" name="mdp" placeholder="Mot de passe" required="" /><br />
+        <span class="ligne"></span>
+    </div>  
+    <input id="env" type="submit" value="Envoyer"> 
+</form> 
 <?php
 if (!empty($_SESSION['erreur'])) {
     echo $_SESSION['erreur'];
@@ -15,4 +27,5 @@ if (!empty($_SESSION['erreur'])) {
     }
     //var_dump($_SESSION);
 ?>
+</main>
 <?php require 'fin.php' ?>
