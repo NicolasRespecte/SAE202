@@ -16,7 +16,7 @@ function connexionBD()
     }
 }
 
-function afficherTrajet($mabd){
+function afficherParking($mabd){
     $req = "SELECT * FROM Trajet";
     try {
         $resultat = $mabd->query($req);
