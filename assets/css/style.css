@@ -30,7 +30,6 @@ nav li a{
     color: white;
     text-decoration: none;
     font-size: 19px;
-    font-weight: ;
     font-family: 'Biryani', sans-serif;
 }
 nav li a img{
@@ -72,6 +71,29 @@ form{
     font-size: 16px;
     font-weight: 500;
 }
+textarea{
+    margin-left: 10px;
+    border: none;
+}
+.deuxchamp{
+    display: flex;
+    width: 100%;
+    height: 59px;
+    gap: 50px;
+}
+.champ2{
+    width: 175px;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid #181818;
+}
+.champ2 input{
+    margin-left: 10px;
+    background-color: transparent;
+    border: none;
+    font-size: 16px;
+    font-weight: 500;
+}
 #env{
     width: 200px;
     border: none;
@@ -88,5 +110,6 @@ label{
 .ligne{
     margin-top: 10px;
     border-top: 1px solid #181818;
-    height: 2px; 
+    height: 1px;
+    width: 100%; 
 }
