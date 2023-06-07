@@ -18,7 +18,7 @@
             <input type="password" name="mdp" placeholder="Mot de passe" required="" /><br />
         <span class="ligne"></span>
     </div>
-    <p class="ins">Vous n’avez pas encore de compte ? <a href="formInscription.php">Incriver vous !</a></p>
+    <p class="ins">Vous n'avez pas encore de compte ? <a href="formInscription.php">Inscrivez vous !</a></p>
     <input id="env" type="submit" value="Envoyer"> 
 </form> 
 <?php

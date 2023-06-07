@@ -50,7 +50,7 @@ function afficherProfil($mabd) {
             echo '<div>Prénom : '.$ligne['prenom_usager'].'</div>';
             echo '<div>Email : '.$ligne['email_usager'].'</div>';
             echo '<div>Téléphone : '.$ligne['telephone_usager'].'</div>';
-            //echo '<div>Mot de passe : '.$ligne['mdp_usager'].'</div>';
+            echo '<div>Mot de passe : **********</div>';
             echo "<hr>\n";
         }
     } else {
