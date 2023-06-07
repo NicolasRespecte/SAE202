@@ -4,19 +4,13 @@
 <h1>Inscription</h1>
 
 <form action="user/validFormInscription.php" method="post">
-        <div class="champ">
-            <label for="statut">Statut</label>
-            <select name="statut"><option>Etudiant</option><option>Professeur</option></select>
-            <span class="ligne"></span>
-        </div>
-
 
         <div class="troischamp">
 
             <div class="champgauche">
                 <div class="champ2">
-                    <label for="prenom">Prenom</label>
-                        <input type="text" name="prenom" placeholder="Prenom" required="" />
+                    <label for="nom">Nom</label>
+                    <input type="text" name="nom" placeholder="Nom" required="" />
                 </div>
                 <div class="champ2">
                     <label for="prenom">Prenom</label>
@@ -25,7 +19,7 @@
             </div>
 
             <div class="champdroite">
-                <label for="photo">Photo</label>
+                <label for="photo">Photo de profil</label>
                 <input type="file" name="photo" id="photoInput" required /><br />
                 <img id="photoPreview" class="photo-preview" src="#" alt="Aperçu de la photo" />
             </div>
@@ -33,13 +27,42 @@
 
 
         </div>
-        Numéro de téléphone : <input type="text" name="num" required/>
-        Modèle véhicule : <input type="text" name="model"/>
-        Adresse e-mail : <input type="email" name="email" required/> 
-        Mot de passe : <input type="password" name="mdp" required/>
-        
-        
-        <input type="submit" value="Envoyer"> 
+        <div class="troischamp" style="height: 260px;">
+
+            <div class="champgauche">
+                <div class="champ2">
+                    <label for="email">Email</label>
+                        <input type="email" name="email" placeholder="Email" required="" />
+                </div>
+                <div class="champ2">
+                    <label for="password">Mot de passe</label>
+                        <input type="password" name="mdp" placeholder="Mot de passe" required="" />
+                </div>
+                <div class="champ2">
+                    <label for="num">Téléphone</label>
+                        <input type="text" name="num" placeholder="Téléphone" required/>
+                </div>
+            </div>
+
+            <div class="champdroite">
+                
+            </div>
+        </div>
+
+         <div class="champ">
+            <label for="statut">Statut</label>
+            <select name="statut"><option>Etudiant</option><option>Professeur</option></select>
+            <span class="ligne"></span>
+        </div>
+
+        <div class="champ">
+            <label for="model">Voiture</label>
+                <input type="text" name="model" placeholder="Voiture" required/>
+            <span class="ligne"></span>
+        </div>
+
+        <input id="env" type="submit" value="Envoyer"> 
+
     </form> 
 </main>
 <script>

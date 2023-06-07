@@ -56,7 +56,7 @@ form{
     display: flex;
     flex-direction: column;
     width: 400px;
-    gap: 50px;
+    gap: 35px;
     align-items: center;
 }
 .champ{
@@ -98,13 +98,14 @@ textarea{
 .troischamp{
     display: flex;
     gap: 50px;
+    border-bottom: 1px solid #181818;
+    height: 160px;
 }
 .champgauche{
     display: flex;
     flex-direction: column;
     width: 175px;
     gap: 25px;
-    height: 143px;
 }
 .champgauche input{
     margin-left: 10px;
@@ -113,7 +114,12 @@ textarea{
     font-size: 16px;
     font-weight: 500;
 }
+.champgauche .champ2{
+    border: none;
+}
 .champdroite{
+    display: flex;
+    flex-direction: column;
     width: 175px;
     height: 143px;
 }
@@ -137,8 +143,9 @@ label{
     width: 100%; 
 }
 .photo-preview {
-    width: 105px;
-    height: 105px;
+    margin-top: 10px;
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
     object-fit: cover;
 }
