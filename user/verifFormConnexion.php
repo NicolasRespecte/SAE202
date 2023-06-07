@@ -16,7 +16,7 @@ if ($lignes_resultat>0) { // y a-t-il des résultats ?
     $ligne=$resultat->fetch(PDO::FETCH_ASSOC);
     if (password_verify($mdp,$ligne['mdp_usager'] )) {
         $_SESSION['prenom_usager'] = $ligne['prenom_usager'];
-        $_SESSION['nom_usager'] = $ligne['nom_usager'];
+        $_SESSION['id_usager'] = $ligne['id_usager'];
         header('Location: ../index.php');
     } else {
         $_SESSION['erreur'] = '<h1 class="erreur">Mot de passe incorrect.</h1>';

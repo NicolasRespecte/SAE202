@@ -3,7 +3,7 @@
 <main>
 <h1>Inscription</h1>
 
-<form action="user/validFormInscription.php" method="post">
+<form action="user/validFormInscription.php" method="post" enctype="multipart/form-data">
 
         <div class="troischamp">
 
@@ -57,7 +57,7 @@
 
         <div class="champ">
             <label for="model">Voiture</label>
-                <input type="text" name="model" placeholder="Voiture" required/>
+                <input type="text" name="model" placeholder="Voiture"/>
             <span class="ligne"></span>
         </div>
 
