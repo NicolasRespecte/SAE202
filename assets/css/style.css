@@ -42,7 +42,8 @@
 }
 .conection{
     display: flex;
-    justify-content: center;
+    width: 180px;
+    justify-content: flex-end;
     align-items: center;
 }
 .conection a{
