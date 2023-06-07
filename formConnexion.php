@@ -5,7 +5,7 @@
 <h1>Connexion</h1>
 
 
-<form action="user/verifFormConnexion.php" method="post">
+<form action="user/verifFormConnexion.php" method="post" enctype="multipart/form-data">
 
     <div class="champ">
         <label for="email">Email</label>

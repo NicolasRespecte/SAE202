@@ -10,12 +10,14 @@
                 <div class="navmain">
                     <a href="index.php">Accueil</a>
                     <a href="Parkings.php">Parkings</a>
+                    <a href="user/formRechercheTrajet.php">Recherchez un Trajet</a>
                     <a href="Contact.php">Contact</a>
+                    
                 </div>
             <li><?php
  
  if (isset($_SESSION['prenom_usager'])){
- echo 'Bienvenue '.$_SESSION['prenom_usager'].' / ';
+ echo 'Bienvenue <a href="profil.php">'.$_SESSION['prenom_usager'].'</a> / ';
  echo '<a href="deconnexion.php">Déconnexion</a>';
  } else {
      echo '<a href="formConnexion.php">Connexion</a> / ';
