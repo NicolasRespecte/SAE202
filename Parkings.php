@@ -4,7 +4,7 @@
 <h1>Parkings</h1>
 <?php
 
-var_dump($_SESSION);
+//var_dump($_SESSION);
             
             $co=connexionBD(); // se connecter à la base de données afficherJeux($co); // afficher les jeux
             afficherParking($co);

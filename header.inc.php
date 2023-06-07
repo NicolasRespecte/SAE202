@@ -10,6 +10,7 @@
                 <div class="navmain">
                     <a href="index.php">Accueil</a>
                     <a href="Parkings.php">Parkings</a>
+                    <a href="Contact.php">Recherchez un Trajet</a>
                     <a href="Contact.php">Contact</a>
                 </div>
             <li><?php
