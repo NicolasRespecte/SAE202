@@ -19,7 +19,7 @@
     </div>
     <div class="champ">
         <label for="email">Email</label>
-            <input type="text" name="email" placeholder="Email" required="" />
+            <input type="email" name="email" placeholder="Email" required="" />
         <span class="ligne"></span>
     </div>
     <div class="champ">
@@ -36,7 +36,6 @@ if (!empty($_SESSION['erreur'])) {
     }
     //var_dump($_SESSION);
 ?>
-BE
 </main>    
 
 <?php require 'fin.php' ?>

@@ -17,17 +17,13 @@ function connexionBD()
 }
 
 function afficherParking($mabd){
-    $req = "SELECT * FROM Parking";
+    $req = "SELECT * FROM Trajet";
     try {
         $resultat = $mabd->query($req);
         $lignes_resultat = $resultat->rowCount();
         if ($lignes_resultat > 0) {
         while($ligne = $resultat->fetch(PDO::FETCH_ASSOC)){
-            echo ' <div>Nom du Parking :'.$ligne['nom_parking'].'</div>';
-            echo ' <div>Localisation :'.$ligne['emplacement_parking'].'</div>';
-            echo ' <div>'.$ligne['jeu_duree_partie'].'</div>';
-            echo '<img src="assets/imgs/'.$ligne['photo_parking'].'" alt="photoparking" />';
-            "\n<hr>";
+        echo '';
         }
      }else {
         echo '<p>Pas de résultat</p>';
