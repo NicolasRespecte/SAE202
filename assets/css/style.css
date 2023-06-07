@@ -27,9 +27,8 @@
       justify-content: center;
       align-items: center;
       list-style: none;
-      gap: 10px;
-      margin: 0 30px;
-       overflow: hidden;
+      margin: 0 15px;
+      overflow: hidden;
   }
   nav li a{
       color: white;
@@ -38,14 +37,38 @@
       font-family: 'Biryani', sans-serif;
   }
 .logo img{
-    width: 140px;
+    width: 180px;
     margin-top: 5px;
+}
+.conection{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.conection a{
+  color: #F97B22;
+}
+.pasco{
+    display: flex;
+    width: 140px;
+    background-color: #FEE8B0;
+    border-radius: 40px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
 }
 .co{
     display: flex;
-    width: 140px;
+    width: 180px;
+    background-color: #FEE8B0;
+    border-radius: 40px;
+    height: 40px;
     justify-content: center;
+    align-items: center;
 }
+
+
+
   .menu-button-container {
     display: none;
     height: 100%;
@@ -217,6 +240,12 @@ textarea{
     flex-direction: column;
     width: 175px;
     height: 143px;
+}
+.ins{
+  color: #B4B4B4;
+}
+.ins a{
+  color: black;
 }
 #env{
     width: 200px;

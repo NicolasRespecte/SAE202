@@ -14,15 +14,14 @@
       <li><a href="user/formRechercheTrajet.php">Trajet</a></li>
       <li><a href="Contact.php">Contact</a></li>
     </ul>
-    <div class="co">
+    <div class="conection">
     <?php
  
  if (isset($_SESSION['prenom_usager'])){
- echo 'Bienvenue <a href="profil.php">'.$_SESSION['prenom_usager'].'</a> / ';
- echo '<a href="deconnexion.php">Déconnexion</a>';
+ echo '<div class="co"><a href="profil.php">'.$_SESSION['prenom_usager'].'</a> / ';
+ echo '<a href="deconnexion.php">Déconnexion</a></div>';
  } else {
-     echo '<a href="formConnexion.php">Connexion</a> / ';
-     echo '<a href="formInscription.php">Inscription</a>';
+     echo '<div class="pasco"><a href="formConnexion.php">Connexion</a></div>';
  } 
 
 ?>
