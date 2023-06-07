@@ -5,5 +5,6 @@
 $co=connexionBD();
             afficherProfil($co);
             deconnexionBD($co);
-            echo '<a href="user/modifProfil.php">Modifiez votre profil ici</a>';
+            echo '<a href="modifProfil.php">Modifiez votre profil ici</a>';
+
 ?>

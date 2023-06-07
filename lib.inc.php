@@ -58,7 +58,6 @@ function afficherProfil($mabd) {
     }
 }
 
-
 function deconnexionBD(&$mabd){
     $mabd = null;
 }
