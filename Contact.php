@@ -36,7 +36,7 @@ if (!empty($_SESSION['erreur'])) {
     }
     //var_dump($_SESSION);
 ?>
-paa
+BE
 </main>    
 
 <?php require 'fin.php' ?>
