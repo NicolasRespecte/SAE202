@@ -5,7 +5,6 @@
 $co=connexionBD();
             afficherProfil($co);
             deconnexionBD($co);
-            echo '<a href="modifProfil.php">Modifiez votre profil ici</a>';
 
 ?>
 <?php require 'fin.php' ?>
