@@ -1,13 +1,12 @@
 <?php require_once '../lib.inc.php'; ?>
 
 <?php
-$nom=$_POST['nom'];
-$prenom=$_POST['prenom'];
-$email=$_POST['email'];
-$num=$_POST['num'];
-$model=$_POST['model'];
-$mdp=$_POST['mdp'];
-$id=$_POST['id'];
+$nom = $_POST['nom'];
+$prenom = $_POST['prenom'];
+$email = $_POST['email'];
+$num = $_POST['num'];
+$model = $_POST['model'];
+$id = $_POST['id'];
 $imageType=$_FILES["photo"]["type"];
 	        if ( ($imageType != "image/png") &&
 	            ($imageType != "image/jpg") &&
@@ -33,10 +32,11 @@ $imageType=$_FILES["photo"]["type"];
 	            echo '<p>Problème : image non chargée...</p>'."\n";
 	            die();
 	        }
+$mabd = connexionBD();
+$req = 'UPDATE Usagers SET nom_usager="' . $nom . '", prenom_usager="' . $prenom . '", email_usager="' . $email . '", telephone_usager="' . $num . '", modele_vehicule="' . $model . '", photo_usager="' . $nouvelleImage . '" WHERE id_usager=' . $id;
 
-$mabd=connexionBD();
-$req = 'UPDATE Usagers SET nom_usager="' . $nom . '", prenom_usager="' . $prenom . '", email_usager="' . $email . '", telephone_usager="' . $num . '", modele_vehicule="' . $model . '", photo_usager="' . $nouvelleImage . '", mdp_usager="' . $mdp . '" WHERE id_usager=' . $id;
-
+$mabd->query($req);
+// var_dump($_SESSION);
 echo '<p>Votre modification a bien était enregistée ! </p>';
 header("refresh:3;url=../profil.php");
 exit;
