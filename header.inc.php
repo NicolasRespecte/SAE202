@@ -1,8 +1,9 @@
 <link rel="stylesheet" href="assets/css/styles.css">
 <meta name="viewport" content="width=device-width, initial-scale=1">
   <nav class="top-nav">
-    <div class="logo">
-      <a href="index.php"><img src="assets/imgs/logo.png" alt=""></a>
+    <div class="logos">
+      <a href="index.php"><img class="logo" src="assets/imgs/logosolo.svg" alt=""></a>
+      <a href="index.php"><img class="titrelogo" src="assets/imgs/logotexte.svg" alt="" ></a>
     </div>
     <input id="menu-toggle" type="checkbox" />
     <label class='menu-button-container' for="menu-toggle">

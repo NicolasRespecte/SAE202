@@ -61,7 +61,7 @@
             <span class="ligne"></span>
         </div>
 
-        <input id="env" type="submit" value="Envoyer"> 
+        <input id="env" type="submit" value="S'inscrire"> 
 
     </form> 
 </main>
