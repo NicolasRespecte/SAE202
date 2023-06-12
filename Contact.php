@@ -5,7 +5,7 @@
 <h1>Contact</h1>
 
 
-<form action="????????????" method="post">
+<form action="envoi_mail.php" method="post">
 
     <div class="deuxchamp">
         <div class="champ2">
@@ -28,15 +28,14 @@
         <span class="ligne"></span>
     </div>
     <input id="env" type="submit" value="Envoyer"> 
+    <?php
+            if (isset($_SESSION['information'])) {
+            echo '<p id="pp">'.$_SESSION['information'].'</p>'."\n";
+            session_unset();
+            }
+        ?>
 </form> 
-<?php
-if (!empty($_SESSION['erreur'])) {
-    echo $_SESSION['erreur'];
-    unset ($_SESSION['erreur']);
-    }
-    //var_dump($_SESSION);
-?>
-BE
+
 </main>    
 
 <?php require 'fin.php' ?>

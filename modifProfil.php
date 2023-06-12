@@ -21,7 +21,7 @@ Prénom:<input type="text" name="prenom" value="<?php echo $ligne['prenom_usager
 Email:<input type="email" name="email" value="<?php echo $ligne['email_usager'] ?>"><br>
 Téléphone:<input type="text" name="num" value="<?php echo $ligne['telephone_usager'] ?>"><br>
 Modèle Véhicule:<input type="text" name="model" value="<?php echo $ligne['modele_vehicule'] ?>"><br>
-Photo : <input type="file" name="photo"/><br />
+<!-- Photo : <input type="file" name="photo"/><br /> -->
     <input id="env" type="submit" value="Envoyer"> 
 </form> 
 <?php
