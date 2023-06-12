@@ -7,15 +7,16 @@
 <br>
 <table border=1>
 	<thead>
-		<tr><td>Nom du Parking</td><td>Emplacement du Parking</td><td>Image</td><td>Supprimer</td><td>Modifier</td></tr><br>
+		<tr><td>N° du Parking</td><td>Nom du Parking</td><td>Emplacement du Parking</td><td>Image</td><td>Supprimer</td><td>Modifier</td></tr><br>
 	</thead>
 	<tbody>
     <?php
 $mabd = connexionBD();
-$req = "SELECT * FROM Parking WHERE id_parking LIKE '%" . $_SESSION['id_parking'] . "%'";
+$req = "SELECT * FROM Parking ORDER BY id_parking";
 $resultat = $mabd->query($req);
 foreach ($resultat as $ligne) {
     echo '<tr>';
+    echo '<td>'.$ligne['id_parking'].'</td>';
     echo '<td>'.$ligne['nom_parking'].'</td>';
     echo '<td>'.$ligne['emplacement_parking'].'</td>';
     echo '<td>'.$ligne['photo_parking'].'</td>';

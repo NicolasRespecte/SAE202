@@ -1,5 +1,5 @@
 <?php require '../debut2.php'; require_once '../lib.inc.php';?>
-<?php require '../header2.inc.php'; ?>
+<?php require '../header.inc.php'; ?>	
 
 <h1>Gestion des Parking</h1>
 <h2>Vous venez de modifier</h2>
@@ -26,7 +26,7 @@ $imageType=$_FILES["photo"]["type"];
     		// dépot du fichier téléchargé dans le dossier /var/www/r214/images/uploads
 	        if(is_uploaded_file($_FILES["photo"]["tmp_name"])) {
 	            if(!move_uploaded_file($_FILES["photo"]["tmp_name"], 
-	            "../../assets/imgs/".$nouvelleImage)) {
+	            "../assets/imgs/".$nouvelleImage)) {
 	                echo '<p>Problème avec la sauvegarde de l\'image, désolé...</p>'."\n";
 	                die();
 	            }
@@ -37,8 +37,10 @@ $imageType=$_FILES["photo"]["type"];
             $mabd = connexionBD();
             $req = 'UPDATE Parking SET nom_parking="'.$nom.'", emplacement_parking="'.$emplacement.'", photo_parking="'.$nouvelleImage.'" WHERE id_parking='.$id ;
 $resultat = $mabd->query($req);
-echo $req;
-            
+//echo $req;
+echo '<h2>Votre modification a bien était enregistée ! </h2>';
+header("refresh:2;url=Parkings_gestion.php");
+exit;            
 ?>
 </tbody>
 </table>

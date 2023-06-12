@@ -26,7 +26,7 @@ $imageType=$_FILES["photo"]["type"];
     		// dépot du fichier téléchargé dans le dossier /var/www/r214/images/uploads
 	        if(is_uploaded_file($_FILES["photo"]["tmp_name"])) {
 	            if(!move_uploaded_file($_FILES["photo"]["tmp_name"], 
-	            "../../assets/imgs/".$nouvelleImage)) {
+	            "../assets/imgs/".$nouvelleImage)) {
 	                echo '<p>Problème avec la sauvegarde de l\'image, désolé...</p>'."\n";
 	                die();
 	            }
@@ -37,9 +37,10 @@ $imageType=$_FILES["photo"]["type"];
 
 
             $req = "INSERT INTO Parking (nom_parking, emplacement_parking, photo_parking) VALUES ('$nom', '$emplacement', '$nouvelleImage')";
-            echo $req;
+            //echo $req;
             $resultat = $mabd->query($req);
-            
+header("refresh:2;url=Parkings_gestion.php");
+exit;
 ?>
 </tbody>
 </table>

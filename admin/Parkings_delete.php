@@ -5,17 +5,14 @@
 
 <?php
 
-$id = $_GET['id_parking'];
-
+$num=$_GET['num'];
 $mabd = connexionBD();
-
-$req = 'DELETE FROM Parking WHERE id_parking='.$id;
-
-echo $req;
- 
+$req = 'DELETE FROM Parking WHERE id_parking='.$num;
+//echo $req; 
 $resultat = $mabd->query($req);
-
-echo '<h2>Vous venez de supprimer le parking numéro '.$id.'</h2>';
+echo '<h2>Vous venez de supprimer le parking numéro '.$num.'</h2>';
+header("refresh:2;url=Parkings_gestion.php");
+exit;
 ?>
 
 </body>

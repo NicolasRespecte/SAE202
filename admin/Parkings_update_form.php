@@ -6,8 +6,9 @@
 <hr>
 
 <?php
+$num = $_GET['num'];
 $mabd = connexionBD();
-$req = "SELECT * FROM Parking WHERE id_parking LIKE '%" . $_SESSION['id_parking'] . "%'";
+$req = 'SELECT * FROM Parking WHERE id_parking ='.$num;
 $resultat = $mabd->query($req);
 $ligne = $resultat->fetch(PDO::FETCH_ASSOC);  // dans $album on a les infos de l'album dont l'id est $num
 
