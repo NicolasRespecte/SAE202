@@ -152,8 +152,7 @@ h1{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 50px 5vw;
-  gap: 25px;
+  margin: 50px 6vw;
 }
 .Atexte{
   display: flex;
@@ -176,15 +175,19 @@ h1{
 }
 .Atexte div{
   display: flex;
-  gap: 20px;
+  gap: 30px;
 }
 .Aforme{
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 20px;
-  min-width: 400px;
-  height: 80vh;
-  background-color: blue;
+  margin: 50px;
+  min-width: 450px;
+  background-color: #9CA777;
+  border-radius: 20px;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1150px) {
   .Accueil{
     flex-direction: column;
   }
@@ -202,9 +205,13 @@ h1{
 form{
     display: flex;
     flex-direction: column;
-    width: 400px;
-    gap: 35px;
+    gap: 40px;
+    margin: 20px;
     align-items: center;
+}
+form h2{
+  font-size: 40px;
+  padding: 15px;
 }
 .champ{
     width: 100%;
@@ -273,18 +280,20 @@ textarea{
 }
 .ins{
   color: black;
+  font-size: 15px;
 }
 .ins a{
   color: black;
 }
 #env{
-    width: 175px;
+    width: 150px;
     border: none;
     height: 50px;
     border-radius: 25px;
     font-size: 16px;
     font-weight: bold;
     background-color: #F97B22;
+    margin-bottom: 10px;
 }
 form label{
     margin-bottom: 14px;
@@ -303,6 +312,30 @@ form label{
     height: 80px;
     border-radius: 50%;
     object-fit: cover;
+}
+.Champsaccuiel{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 15px;
+}
+.galery{
+  margin: 0px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: red;
+  gap: 50px;
+  justify-content: center;
+}
+.card{
+  display: flex;
+  flex-direction: column;
+  max-width: 480px;
+  height: 520px;
+  background-color: aqua;
+  padding: 20px;
+  border-radius: 20px;
+  gap: 15px;
 }
 @media (max-width: 780px) {
   .menu-button-container {
@@ -347,10 +380,64 @@ form label{
   }
 }
 @media (max-width: 480px) {
+  h1 {
+    padding: 40px;
+    font-size: 45px;
+  }
   .titrelogo{
     display: none;
   }
   .Accueil {
-    margin: 5px;
+    margin: 0px;
   }
+  .Atexte {
+    gap: 35px;
+  }
+  .Atexte h1 {
+    font-size: 54px;
+  }
+  .Atexte h2 {
+    font-size: 27px;
+    text-align: center;
+  }
+  .Atexte p {
+    font-size: 18px;
+  }
+  #env{
+    width: 125px;
+    height: 45px;
+  }
+  .Aforme {
+    padding: 20px;
+    margin: 20px;
+    border-radius: 20px;
+    min-width: 0px ;
+  }
+  .Aforme form {
+    margin: 0px;
+  }
+  form {
+    gap: 20px;
+  }
+  form h2 {
+    font-size: 27px;
+    padding: 10px;
+  }
+  .ins {
+    text-align: center;
+    line-height: 23px;
+  }
+  .champ2 {
+    width: 110px;
+  }
+  .champgauche {
+    width: auto;
+  }
+  .champgauche {
+    width: 110px;
+  }
+  .troischamp {
+    gap: 0px;
+  }
+
 }

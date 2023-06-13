@@ -23,10 +23,15 @@ function afficherParking($mabd){
         $lignes_resultat = $resultat->rowCount();
         if ($lignes_resultat > 0) {
         while($ligne = $resultat->fetch(PDO::FETCH_ASSOC)){
-            echo ' <div>Nom du Parking :'.$ligne['nom_parking'].'</div>';
-            echo ' <div>Localisation :'.$ligne['emplacement_parking'].'</div>';
-            echo '<img src="assets/imgs/'.$ligne['photo_parking'].'" alt="photoparking" />';
-            echo "\n<hr>";
+            echo '<div class="card">
+                        <div>
+                            <iframe src="'.$ligne['photo_parking'].'" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                        <div>
+                        '.$ligne['nom_parking'].'
+                        </div>
+                        <div>Localisation exacte :'.$ligne['emplacement_parking'].'</div>
+                </div>';
         }
      }else {
         echo '<p>Pas de résultat</p>';
