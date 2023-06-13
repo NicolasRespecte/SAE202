@@ -19,10 +19,20 @@
     </ul>
     <div class="conection">
       <?php
-  
+
         if (isset($_SESSION['prenom_usager'])){
-        echo '<div class="co"><a href="profil.php">'.$_SESSION['prenom_usager'].'</a> / ';
-        echo '<a href="deconnexion.php">Déconnexion</a></div>';
+          echo '<div class="co">
+          <p>
+            <img class="profil" src="assets/imgs/Upload/'. $_SESSION['photo_usager'].'" alt="Photo de profil">
+            ' . $_SESSION['prenom_usager'] . '
+          </p>
+          <div class="deroule">
+            <a href="../profil.php">Profil</a>
+            <a href="../deconnexion.php">Déconnexion</a>
+            <a href="mestrajet">Mes trajets</a>
+          </div>
+        </div>';
+              
         } else {
             echo '<div class="pasco"><a href="formConnexion.php">Connexion</a></div>';
         } 
