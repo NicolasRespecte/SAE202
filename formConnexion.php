@@ -1,5 +1,5 @@
 <?php require 'debut.php'; require_once 'lib.inc.php';?>
-<?php require 'header.inc.php' ?>
+<?php require 'header.inc.php'; ?>
 
 <main>
 <h1>Connexion</h1>
@@ -29,4 +29,4 @@ if (!empty($_SESSION['erreur'])) {
     //var_dump($_SESSION);
 ?>
 </main>
-<?php require 'fin.php' ?>
+<?php require 'fin.php' ;?>

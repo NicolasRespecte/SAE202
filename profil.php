@@ -1,5 +1,5 @@
 <?php require 'debut.php'; require_once 'lib.inc.php';?>
-<?php require 'header.inc.php' ?>
+<?php require 'header.inc.php'; ?>
 
 <?php
 $co=connexionBD();
@@ -7,4 +7,4 @@ $co=connexionBD();
             deconnexionBD($co);
 
 ?>
-<?php require 'fin.php' ?>
+<?php require 'fin.php'; ?>

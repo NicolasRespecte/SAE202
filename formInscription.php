@@ -1,5 +1,5 @@
 <?php require 'debut.php'; require_once 'lib.inc.php';?>
-<?php require 'header.inc.php' ?>
+<?php require 'header.inc.php'; ?>
 <main>
 <h1>Inscription</h1>
 
@@ -89,4 +89,4 @@
     });
 </script>
 
-<?php require 'fin.php' ?>
+<?php require 'fin.php'; ?>

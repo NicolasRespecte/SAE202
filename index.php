@@ -1,5 +1,5 @@
 <?php require 'debut.php'; require_once 'lib.inc.php';?>
-<?php require 'header.inc.php' ?>
+<?php require 'header.inc.php'; ?>
 
 <div class="Accueil">
     <div class="Atexte">
@@ -14,4 +14,4 @@
     <div class="Aforme">recoucou</div>
 </div>
 
-<?php require 'fin.php' ?>
+<?php require 'fin.php'; ?>
