@@ -1,19 +1,7 @@
 <?php require 'debut.php'; require_once 'lib.inc.php';?>
-<?php require 'header.inc.php' ?>
-
-<div class="Accueil">
-    <div class="Atexte">
-        <h1>Ride & Co</h1>
-        <h2>Des voyages partagés, des liens créés !</h2>
-        <p>Un vaste choix de trajets à petits prix. Expedita, nesciunt dolores? Expedita, nesciunt dolores? Esse repudiandae ab quam sapiente officia aliquam, expedita nemo cumque voluptate quia distinctio exercitationem voluptatibus, eligendi vero atque tenetur.</p>
-        <div>
-            <a href="formConnexion.php"><input id="env" type="submit" value="Connexion"></a>
-            <a href="formInscription.php"><input id="env" type="submit" value="Incription"></a>
-        </div>
-    </div>
-    <div class="Aforme">
-
-    <form action="resultatRechercheTrajet.php" method="post" enctype="multipart/form-data">
+<?php require 'header.inc.php'; ?>
+<div class="container">
+<form action="resultatRechercheTrajet.php" method="post" enctype="multipart/form-data">
 
     <h2>Trouver un trajet</h2>
 
@@ -42,7 +30,7 @@
         <div class="Champsaccuiel">
             <div class="champ">
                 <label for="personne">Passagers</label>
-                    <input type="number" name="personne" step="1" min="1" max="3" placeholder="Passagers" required="" />
+                    <input type="number" name="personne" step="1" min="1" max="4" placeholder="Passagers" required="" />
                 <span class="ligne"></span>
             </div>
         </div>
@@ -50,7 +38,4 @@
 <p class="ins">Vous n'avez pas encore de compte? <a href="formInscription.php">Inscrivez vous !</a></p>
 <input id="env" type="submit" value="Chercher">
 </form>
-    </div>
 </div>
-
-<?php require 'fin.php' ?>
