@@ -27,6 +27,7 @@
     gap: 5px;
     position: fixed;
     width: 100%;
+    z-index: 10;
   }
   .espace{
     width: 100%;
@@ -251,6 +252,7 @@ h1{
   background-color: #fff;
   border-radius: 20px;
   opacity: 0.8;
+  z-index: 1;
 }
 
 .container{
