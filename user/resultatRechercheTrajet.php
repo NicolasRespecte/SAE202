@@ -1,22 +1,40 @@
-<?php
-    if ( (empty($_POST['recherche'])) ) {
-        header('Location: forme_recherche.php');
+<?php 
+require 'debut.php'; 
+require_once 'lib.inc.php';
+require 'header.inc.php';
+
+echo '<h1>Trajet disponible</h1>';
+
+$depart = $_POST['depart'];
+$arrive = $_POST['arrive'];
+$datedepart = $_POST['datedepart'];
+$personne = $_POST['personne'];
+
+$mabd = connexionBD();
+
+$req = 'SELECT * FROM Trajet WHERE ville_depart = "'.$depart.'" AND ville_arrivee = "'.$arrive.'" AND date_depart = "'.$datedepart.'" OR places_dispo = "'.$personne.'"';
+$resultat = $mabd->query($req);
+
+if ($resultat->rowCount() == 0) {
+    echo "<p>Aucun résultat trouvé.</p>";
+} else {
+    foreach ($resultat as $ligne) {
+        echo '<div>';
+        echo '<p>Ville de départ: '.$ligne['ville_depart'].'</p>';
+        echo '<p>Ville d\'arrivée: '.$ligne['ville_arrivee'].'</p>';
+        echo '<p>Point de départ: '.$ligne['point_depart'].'</p>';
+        echo '<p>Point d\'arrivée: '.$ligne['point_arrivee'].'</p>';
+        echo '<p>Date de départ: '.$ligne['date_depart'].'</p>';
+        echo '<p>Heure départ: '.$ligne['heure_depart'].'</p>';
+        echo '<p>Heure arrivée: '.$ligne['heure_arrivee'].'</p>';
+        echo '<p>Places disponibles: '.$ligne['places_dispo'].'</p>';
+        echo '<p>Prix: '.$ligne['prix_passager'].' €</p>';
+        echo '<a href="user/reserverTrajet.php">Réserver</a>';
+        echo '</div><hr>';
     }
-    $recherche = $_POST['recherche'];
-    $recherche_nettoye =  filter_var( $recherche , FILTER_SANITIZE_SPECIAL_CHARS);
-    ?>
+}
 
-<?php require '../debut.php'; require_once '../lib.inc.php';?>
-<?php require '../header.inc.php'; ?>
+//var_dump($_POST);
 
-<h1>Trajet disponible</h1>
-<?php
-
-//var_dump($_SESSION);
-            
-            $co=connexionBD(); // se connecter à la base de données afficherJeux($co); // afficher les jeux
-            afficherTrajet($co);
-            deconnexionBD($co); // se déconnecter de la base de données 
-            ?> 
-    
-<?php require '../fin.php'; ?>
+require 'fin.php'; 
+?>

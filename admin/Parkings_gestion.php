@@ -1,33 +1,32 @@
 <?php require '../debut2.php'; require_once '../lib.inc.php';?>
 <?php require '../header.inc.php'; ?>
-	
+<?php require 'header-admin.php'; ?>
+<main>	
 <h1>Gestion des Parkings</h1>
-<br>
-<a href="Parkings_new_form.php">Ajouter un Parking</a>
-<br>
-<table border=1>
-	<thead>
-		<tr><td>N° du Parking</td><td>Nom du Parking</td><td>Emplacement du Parking</td><td>Image</td><td>Supprimer</td><td>Modifier</td></tr><br>
-	</thead>
-	<tbody>
-    <?php
+
+<div class="gestion">
+<div class="aa">
+<p>Liste des Parkings</p><a href="Parkings_new_form.php"><img src="../assets/imgs/pluss.svg" alt="" width="25px"></a>
+</div>
+<?php
 $mabd = connexionBD();
 $req = "SELECT * FROM Parking ORDER BY id_parking";
 $resultat = $mabd->query($req);
 foreach ($resultat as $ligne) {
-    echo '<tr>';
-    echo '<td>'.$ligne['id_parking'].'</td>';
-    echo '<td>'.$ligne['nom_parking'].'</td>';
-    echo '<td>'.$ligne['emplacement_parking'].'</td>';
-    echo '<td>'.$ligne['photo_parking'].'</td>';
-    echo '<td><a href="Parkings_delete.php?num='.$ligne['id_parking'].'">supprimer</a></td>';
-    echo '<td><a href="Parkings_update_form.php?num='.$ligne['id_parking'].'">modifier</a></td>';
-    echo '</tr>';
+
+    echo '<div class="bb">' . $ligne['id_parking'] .
+    '<div>' . $ligne['emplacement_parking'] . '</div>' .
+    '<div class="vrap">' . $ligne['photo_parking'] . '</div>' .
+    '<div>' . $ligne['nom_parking'] . '</div>' .
+    '<div class="boutons">' . '<a href="Parkings_dele.php?num=' . $ligne['id_parking'] . '"><img src="../assets/imgs/multi.svg" alt="" width="20px"></a>' .
+    '<a href="Parkings_update_form.php?num=' . $ligne['id_parking'] . '"><img src="../assets/imgs/PENSIL.svg" alt=""width="20px"></a>' . '</div></div>';
+
+
+
+
 }
 ?>
 
-
-</tbody>
-</table>
-</body>
-</html>
+</div>
+</main>
+<?php require '../fin.php' ?>  

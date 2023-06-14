@@ -5,7 +5,7 @@
     <div class="Atexte">
         <h1>Ride & Co</h1>
         <h2>Des voyages partagés, des liens créés !</h2>
-        <p>Un vaste choix de trajets à petits prix. Expedita, nesciunt dolores? Expedita, nesciunt dolores? Esse repudiandae ab quam sapiente officia aliquam, expedita nemo cumque voluptate quia distinctio exercitationem voluptatibus, eligendi vero atque tenetur.</p>
+        <p>Ride&Co n'est pas seulement une application de covoiturage ordinaire, mais elle est exclusivement réservée aux étudiants et aux professeurs de la filière MMI. Pourquoi cibler spécifiquement cette filière ? Tout simplement pour favoriser la création de liens entre les étudiants de différents niveaux et assurer la sécurité de tous.</p>
         <div>
             <a href="formConnexion.php"><input id="env" type="submit" value="Connexion"></a>
             <a href="formInscription.php"><input id="env" type="submit" value="Incription"></a>

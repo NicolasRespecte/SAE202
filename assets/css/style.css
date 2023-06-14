@@ -5,18 +5,32 @@
     font-family: 'Montserrat', sans-serif;
   }
   body{
-    background-color: #FEE8B0;
+    background: url(../imgs/accueil.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .ParPar{
+    background: url(../imgs/parkingss.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
   }
   nav {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    background-color: #7C9070;
-    color: #FFF;
+    background-color: #1e3557;
+    color: #F8F8F8;
     height: 60px;
     padding: 10px;
     gap: 5px;
+    position: fixed;
+    width: 100%;
+  }
+  .espace{
+    width: 100%;
+    height: 50px;
   }
   
   .menu {
@@ -24,6 +38,17 @@
     flex-direction: row;
     list-style-type: none;
   }
+  .menuadmin{ 
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  }
+  @media (max-width: 960px) {
+    .menuadmin li{ 
+      font-size: 12px ;
+      }
+  }
+
   
   nav li{
       display: flex;
@@ -34,7 +59,7 @@
       overflow: hidden;
   }
   nav li a{
-      color: white;
+      color: #F8F8F8;
       text-decoration: none;
       font-size: 19px;
       font-family: 'Biryani', sans-serif;
@@ -61,13 +86,15 @@
     align-items: center;
 }
 .conection a{
-  color: black;
+  color: #F8F8F8;
+  text-decoration: none;
+  font-weight: bold;
 }
 .pasco{
     display: block;
     display: flex;
     width: 130px;
-    background-color: #F97B22;
+    background-color: #ff6600;
     border-radius: 40px;
     height: 40px;
     justify-content: center;
@@ -76,8 +103,8 @@
 .co{
     display: flex;
     width: 175px;
-    background-color: #F97B22;
-    border-radius: 10px;
+    background-color: #ff6600;
+    border-radius: 20px;
     height: 40px;
     justify-content: center;
     align-items: center;
@@ -85,7 +112,7 @@
 }
 .co p{
   width: 100%;
-  margin: 0px 10px;
+  margin: 0px 5px;
   display: flex;
   justify-content: left;
   align-items: center;
@@ -94,19 +121,24 @@
 .deroule{
   display: none;
 }
+.deroule a{
+  color: #F8F8F8;
+  text-decoration: none;
+  font-weight: bold;
+}
 .conection:hover .deroule{
   display: block;
   display: flex;
-  padding: 10px;
+  padding: 10px 15px;
   gap: 10px;
   width: 100% ;
   height: 100px;
   flex-direction: column;
-  background-color: #F97B22;
+  background-color: #ff6600;
   position: absolute;
   top: 35px;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
 }
 .co:hover{
   border-bottom-left-radius: 0px;
@@ -135,7 +167,7 @@
   .menu-button::before,
   .menu-button::after {
     display: block;
-    background-color: #fff;
+    background-color: #F8F8F8;
     position: absolute;
     height: 4px;
     width: 30px;
@@ -184,6 +216,7 @@ h1{
   justify-content: space-between;
   align-items: center;
   margin: 50px 6vw;
+  margin-bottom: 0px;
 }
 .Atexte{
   display: flex;
@@ -215,9 +248,11 @@ h1{
   padding: 20px;
   margin: 50px;
   min-width: 450px;
-  background-color: #9CA777;
+  background-color: #fff;
   border-radius: 20px;
+  opacity: 0.8;
 }
+
 .container{
   margin: 20px;
 }
@@ -318,7 +353,7 @@ textarea{
     border-radius: 25px;
     font-size: 16px;
     font-weight: bold;
-    background-color: #F97B22;
+    background-color: #ff6600;
     margin-bottom: 10px;
 }
 form label{
@@ -349,7 +384,6 @@ form label{
   margin: 0px 20px;
   display: flex;
   flex-wrap: wrap;
-  background-color: red;
   gap: 50px;
   justify-content: center;
 }
@@ -362,6 +396,51 @@ form label{
   padding: 20px;
   border-radius: 20px;
   gap: 15px;
+}
+.gestion{
+  display: flex;
+  flex-direction: column;
+  margin: 0px 20px; 
+  padding: 20px 10px;
+  gap: 10px;
+  background-color: #1e3557;
+  color: black;
+  border-radius: 20px;
+  width: 90%;
+}
+.aa{
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 15px;
+  font-size: 18px;
+  margin-bottom: 5px;
+  color: #F8F8F8;
+}
+.bb{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 20px;
+  gap: 20px;
+  background-color: #fff;
+  border-radius: 50px;
+  height: 50px;
+}
+.bb div{
+  display: flex;
+  align-items: center;
+  justify-content: center ;
+  text-align: center;
+  width: 20%;
+} 
+.boutons{
+  display: flex;
+  justify-content: flex-end  !important;
+  gap: 20px;
+}
+.boutons a{
+  display: flex;
 }
 @media (max-width: 1150px) {
   .Accueil{
@@ -407,7 +486,7 @@ form label{
     justify-content: left;
     width: 100%;
     color: white;
-    background-color: #7C9070;
+    background-color: #1e3557;
   }
   .menu > li > a{
     margin-left: 20px;

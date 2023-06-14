@@ -110,7 +110,7 @@ function afficherProfil($mabd) {
                         <span class="ligne"></span>
                     </div>
             
-                    <input id="env" type="submit" ligne="Modifier"> 
+                    <input id="env" type="submit" value="Modifier"> 
             
                 </form> 
             </main>';
@@ -119,6 +119,31 @@ function afficherProfil($mabd) {
         echo '<p>Pas de résultat</p>';
     }
 }
+
+
+
+function afficherTrajet($mabd){
+    $req = "SELECT * FROM Trajet INNER JOIN Usagers ON Trajet.id_usager = Usagers.id_usager WHERE ville_depart LIKE '%" . $recherche_nettoye . "%' OR film_duree LIKE '%" . $recherche_nettoye . "%' OR film_recette LIKE '%" . $recherche_nettoye . "%' OR film_annee LIKE '%" . $recherche_nettoye . "%' OR realisateur_prenom LIKE '%" . $recherche_nettoye . "%' OR realisateur_nom LIKE '%" . $recherche_nettoye . "%'";
+	$resultat = $mabd->query($req);
+	if ($resultat->rowCount() == 0) {
+    echo "<p>Aucun résultat trouvé.</p>";
+}else{
+	foreach ($resultat as $ligne) {
+		echo '<div>' ;
+		echo '<p>'.$ligne['film_titre'].'</p>';
+		echo '<p>Année de sortie: '.$ligne['film_annee'].'</p>';
+		echo '<p>Box office: '.$ligne['film_recette'].' millions $</p>';
+		echo '<p> Durée: '.$ligne['film_duree'].' minutes</p>';
+		echo '<p> Réalisateur: '.$ligne['realisateur_prenom'].' '.$ligne['realisateur_nom'].'</p>';
+		echo '<p> <img width="350px" height"auto" src="images/uploads/' . $ligne['film_photo'] . '"> </p>';
+		echo '</div><hr>';
+  }
+	}
+}
+
+
+
+
 
 function deconnexionBD(&$mabd){
     $mabd = null;
