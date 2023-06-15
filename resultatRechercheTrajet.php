@@ -12,7 +12,7 @@ $personne = $_POST['personne'];
 
 $mabd = connexionBD();
 
-$req = 'SELECT * FROM Trajet WHERE ville_depart = "'.$depart.'" AND ville_arrivee = "'.$arrive.'" AND date_depart = "'.$datedepart.'" OR places_dispo = "'.$personne.'"';
+$req = 'SELECT * FROM Trajet WHERE ville_depart = "'.$depart.'" OR ville_arrivee = "'.$arrive.'" AND date_depart = "'.$datedepart.'" AND places_dispo = "'.$personne.'"';
 $resultat = $mabd->query($req);
 
 if ($resultat->rowCount() == 0) {

@@ -7,7 +7,7 @@
 <form action="Parkings_new_valide.php" method="POST" enctype="multipart/form-data">
     Nom du Parking:<input type="text" name="nom">
     Emplacement du Parking:<input type="text" name="emplacement">
-    Photo : <input type="file" name="photo" required />
+    Iframe : <input type="text" name="iframe" required />
     
     <?php
 		$mabd = connexionBD();

@@ -13,9 +13,9 @@
   <ul class="menu">
       <li><a href="index.php">Stats</a></li>
       <li><a href="Parkings_gestion.php">Parkings</a></li>
-      <li><a href="??">Trajets</a></li>
-      <li><a href="??">Réservations</a></li>
-      <li><a href="??">Usagers</a></li>
+      <li><a href="Trajets_gestion.php">Trajets</a></li>
+      <li><a href="Reservation_gestion.php">Réservations</a></li>
+      <li><a href="Usagers_gestion.php">Usagers</a></li>
       <li><a href="../index.php">Retour au site</a></li>
   </ul>
 </nav>

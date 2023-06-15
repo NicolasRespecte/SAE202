@@ -15,9 +15,9 @@ foreach ($resultat as $ligne) {
 
     echo '<div class="bb">' . $ligne['id_parking'] .
     '<div>' . $ligne['emplacement_parking'] . '</div>' .
-    '<div class="vrap">' . $ligne['photo_parking'] . '</div>' .
+    '<div class="vrap">' . $ligne['iframe_parking'] . '</div>' .
     '<div>' . $ligne['nom_parking'] . '</div>' .
-    '<div class="boutons">' . '<a href="Parkings_dele.php?num=' . $ligne['id_parking'] . '"><img src="../assets/imgs/multi.svg" alt="" width="20px"></a>' .
+    '<div class="boutons">' . '<a href="Parkings_delete.php?num=' . $ligne['id_parking'] . '"><img src="../assets/imgs/multi.svg" alt="" width="20px"></a>' .
     '<a href="Parkings_update_form.php?num=' . $ligne['id_parking'] . '"><img src="../assets/imgs/PENSIL.svg" alt=""width="20px"></a>' . '</div></div>';
 
 

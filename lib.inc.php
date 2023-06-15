@@ -25,7 +25,7 @@ function afficherParking($mabd){
         while($ligne = $resultat->fetch(PDO::FETCH_ASSOC)){
             echo '<div class="card">
                         <div>
-                            <iframe src="'.$ligne['photo_parking'].'" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            <iframe src="'.$ligne['iframe_parking'].'" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                         </div>
                         <div>
                         '.$ligne['nom_parking'].'
@@ -110,7 +110,10 @@ function afficherProfil($mabd) {
                         <span class="ligne"></span>
                     </div>
             
-                    <input id="env" type="submit" value="Modifier"> 
+                    <input id="env" type="submit" value="Modifier">
+                    </form>
+                    <form action="suppProfil.php" method="post" enctype="multipart/form-data">
+                    <input id="env" type="submit" value="Supprimer"> 
             
                 </form> 
             </main>';
