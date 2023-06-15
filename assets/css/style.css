@@ -444,6 +444,94 @@ form label{
 .boutons a{
   display: flex;
 }
+.boite{
+  min-width: 300px;
+  width: 50vw;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: #1e3557;
+  color: #F8F8F8;
+  border-radius: 20px;
+  align-items: center;
+  padding: 10px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.ville{
+  width: 30%;
+}
+.villo{
+  width: 50%;
+}
+.petite{
+  width: 100%;
+  display: flex;
+  gap: 10px;
+  font-size: 12px;
+}
+.tra{
+  margin-top: 10px;
+  width: 100%;
+  display: flex;
+  gap: 10px;
+  font-size: 15px;
+}
+.DéAr{
+  width: 100%;
+  display: flex;
+  font-size: 14px;
+}
+.Départt{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 50%;
+  gap: 5px;
+}
+.Ari{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 50%;
+  gap: 5px;
+}
+.containerrr {
+  position: relative;
+  height: 10px;
+  width: 100px;
+}
+
+.point {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #F8F8F8;
+  position: absolute;
+  top: -5x;
+  left: 0;
+}
+.point2 {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #F8F8F8;
+  position: absolute;
+  top: 0px;
+  right: -5px;
+}
+
+.barre {
+  width: 90px;
+  height: 8px;
+  background-color: #F8F8F8;
+  position: absolute;
+  top: 8px;
+  left: 10px;
+  transform: translateY(-50%);
+}
+
 @media (max-width: 1150px) {
   .Accueil{
     flex-direction: column;
