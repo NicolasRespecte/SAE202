@@ -28,8 +28,6 @@
         <span class="ligne"></span>
     </div>
 
-    <p class="ins">Vous avez envie voir ce que ca donne ? <a href="../Parkings.php">Allez voir !</a></p>
-
     <input id="env" type="submit" name="ajouter">
     
 </form> 
