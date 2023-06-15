@@ -3,7 +3,6 @@
 
 <h1>Gestion des Usagers</h1>
 <h2>Modification de l'usager</h2>
-<hr>
 
 <?php
 $num = $_GET['num'];
