@@ -3,7 +3,6 @@
 
 <h1>Gestion des Parking</h1>
 <h2>Vous venez d'ajouter un parking</h2>
-<hr>
 <?php
 $nom=$_POST['nom'];
 $emplacement=$_POST['emplacement'];
@@ -18,7 +17,5 @@ $mabd = connexionBD();
 header("refresh:2;url=Parkings_gestion.php");
 exit;
 ?>
-</tbody>
-</table>
 </body>
 </html>

@@ -3,7 +3,6 @@
 
 <h1>Gestion des Usagers</h1>
 <h2>Modification de l'usager</h2>
-
 <?php
 $num = $_GET['num'];
 $mabd = connexionBD();
@@ -14,8 +13,8 @@ $ligne = $resultat->fetch(PDO::FETCH_ASSOC);  // dans $album on a les infos de l
 
 ?>
 
-<form action="Usagers_new_valide.php" method="post" enctype="multipart/form-data">
-
+<form action="Usagers_update_valide.php" method="post" enctype="multipart/form-data">
+<input type="hidden" name="idusager" value="<?php echo $ligne['id_usager'] ?>" >
         <div class="troischamp">
 
             <div class="champgauche">
@@ -50,8 +49,8 @@ $ligne = $resultat->fetch(PDO::FETCH_ASSOC);  // dans $album on a les infos de l
                         <input type="password" name="mdp" value="<?php echo $ligne['mdp_usager'] ?>" required="" />
                 </div>
                 <div class="champ2">
-                    <label for="num">Téléphone</label>
-                        <input type="text" name="num" value="<?php echo $ligne['telephone_usager'] ?>" required/>
+                    <label for="numero">Téléphone</label>
+                        <input type="text" name="numero" value="<?php echo $ligne['telephone_usager'] ?>" required/>
                 </div>
             </div>
 
@@ -82,7 +81,5 @@ if (!empty($_SESSION['erreur'])) {
     }
     //var_dump($_SESSION);
 ?>
-</tbody>
-</table>
 </body>
 </html>

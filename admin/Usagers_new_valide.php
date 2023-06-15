@@ -37,7 +37,6 @@ $mdpcrypt=password_hash($mdp,PASSWORD_DEFAULT);
 $mabd=connexionBD();
 $req='INSERT INTO Usagers(nom_usager,prenom_usager,telephone_usager,email_usager,mdp_usager,modele_vehicule,photo_usager) VALUES("'.$nom.'","'.$prenom.'", "'. $num .'", "'. $email .'","' .$mdpcrypt. '","'.$model.'","' .$nouvelleImage. '")'; 
 //echo $req;
-// on lance la requête
 $resultat=$mabd->query($req);
 header("refresh:2;url=Usagers_gestion.php");
 exit;

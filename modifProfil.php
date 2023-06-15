@@ -8,7 +8,7 @@
 $mabd = connexionBD();
 $req = "SELECT * FROM Usagers WHERE id_usager LIKE '%" . $_SESSION['id_usager'] . "%'";
 $resultat = $mabd->query($req);
-$ligne = $resultat->fetch(PDO::FETCH_ASSOC);  // dans $album on a les infos de l'album dont l'id est $num
+$ligne = $resultat->fetch(PDO::FETCH_ASSOC); 
 
 
 ?>

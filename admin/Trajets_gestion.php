@@ -20,8 +20,8 @@ foreach ($resultat as $ligne) {
     '<div>' . $ligne['ville_arrivee'] . '</div>' .
     '<div>' . $ligne['date_depart'] . '</div>' .
     '<div>' . $ligne['heure_depart'] . '</div>' .
+    '<div>' . $ligne['heure_arrivee'] . '</div>' .
     '<div>' . $ligne['places_dispo'] . '</div>' .
-    '<div>' . $ligne['prix_passager'] . '</div>' .
     '<div class="boutons">' . '<a href="Trajets_delete.php?num=' . $ligne['id_trajet'] . '"><img src="../assets/imgs/multi.svg" alt="" width="20px"></a>' .
     '<a href="Trajets_update_form.php?num=' . $ligne['id_trajet'] . '"><img src="../assets/imgs/PENSIL.svg" alt=""width="20px"></a>' . '</div></div>';
 

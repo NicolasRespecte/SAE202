@@ -1,8 +1,8 @@
-<?php require '../debut2.php'; require_once '../lib.inc.php';?>
-<?php require 'header-admin.php'; ?>
-
-<h1>Gestion des Trajets</h1>
-<h2>Modification du trajet</h2>
+<?php require 'debut.php'; require_once 'lib.inc.php';?>
+<?php require 'header.inc.php'; ?>
+<br>
+<main>
+<h2>Modification de votre trajet</h2>
 <?php
 $num = $_GET['num'];
 $mabd = connexionBD();
@@ -69,8 +69,9 @@ $ligne = $resultat->fetch(PDO::FETCH_ASSOC);  // dans $album on a les infos de l
                 <span class="ligne"></span>
             </div>
         </div>
-        <input type="submit" name="ajouter">
+        <input id="env" type="submit" value="Modifier">
 </form>
+</main>
 <?php
 if (!empty($_SESSION['erreur'])) {
     echo $_SESSION['erreur'];

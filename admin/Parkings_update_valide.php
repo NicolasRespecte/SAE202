@@ -2,8 +2,6 @@
 <?php require 'header-admin.php'; ?>
 
 <h1>Gestion des Parking</h1>
-<h2>Vous venez de modifier</h2>
-<hr>
 <?php
 $id = $_POST['idparking'];
 $nom=$_POST['nom'];
@@ -18,7 +16,5 @@ echo '<h2>Votre modification a bien était enregistée ! </h2>';
 header("refresh:2;url=Parkings_gestion.php");
 exit;            
 ?>
-</tbody>
-</table>
 </body>
 </html>

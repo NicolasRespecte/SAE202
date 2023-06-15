@@ -28,7 +28,6 @@ if ($resultat->rowCount() == 0) {
         echo '<p>Heure départ: '.$ligne['heure_depart'].'</p>';
         echo '<p>Heure arrivée: '.$ligne['heure_arrivee'].'</p>';
         echo '<p>Places disponibles: '.$ligne['places_dispo'].'</p>';
-        echo '<p>Prix: '.$ligne['prix_passager'].' €</p>';
         echo '<a href="user/reserverTrajet.php">Réserver</a>';
         echo '</div><hr>';
     }

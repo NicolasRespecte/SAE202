@@ -1,9 +1,17 @@
-<?php require '../debut2.php'; require_once '../lib.inc.php';?>
-<?php require 'header-admin.php'; ?>
-
-<h1>Gestion des Trajets</h1>
-<p>Ajouter un trajet ici</p>
-<form action="Trajets_new_valide.php" method="POST" enctype="multipart/form-data">
+<?php require 'debut.php'; require_once 'lib.inc.php';?>
+<?php require 'header.inc.php'; ?>
+<br>
+<br>
+<?php
+$mabd=connexionBD();
+$req = "SELECT * FROM Usagers WHERE id_usager LIKE '%" . $_SESSION['id_usager'] . "%'";
+$resultat = $mabd->query($req);
+$ligne = $resultat->fetch(PDO::FETCH_ASSOC); 
+?>
+<main>
+<p>Proposer un trajet ici</p>
+<form action="validproposertrajet.php" method="POST" enctype="multipart/form-data">
+<input type="hidden" name="idusager" value="<?php echo $ligne['id_usager'] ?>" >
 <div class="Champsaccuiel">
             <div class="champ">
                 <label for="depart">Point de départ</label>
@@ -58,9 +66,9 @@
                 <span class="ligne"></span>
             </div>
         </div>
-        <input type="submit" name="ajouter">
+        <input id="env" type="submit" value="Ajouter">
 </form>
-
+</main>
    <?php
 		$mabd = connexionBD();
 		$req = "SELECT * FROM  Trajet ";

@@ -3,13 +3,14 @@
 
 <h1>Gestion des Usagers</h1>
 <h2>Vous venez de modifier un usager</h2>
-<hr>
 <?php
+$id=$_POST['idusager'];
 $nom=$_POST['nom'];
 $prenom=$_POST['prenom'];
-$num=$_POST['num'];
+$numero=$_POST['numero'];
 $model=$_POST['model'];
 $email=$_POST['email'];
+$statut=$_POST['statut'];
 $mdp=$_POST['mdp'];
 $imageType=$_FILES["photo"]["type"];
 	        if ( ($imageType != "image/png") &&
@@ -38,12 +39,11 @@ $imageType=$_FILES["photo"]["type"];
 	        }
 $mdpcrypt=password_hash($mdp,PASSWORD_DEFAULT);
 $mabd=connexionBD();
-$req = 'UPDATE Usagers SET nom_usager="'.$nom.'", prenom_usager="'.$prenom.'", telephone_usager="'.$num.'", email_usager="'.$email.'", mdp_usager="'.$mdp.'", modele_vehicule="'.$model.'", photo_usager="'.$nouvelleImage.'" WHERE id_usager='.$id ;
-echo $req;
-// on lance la requête
+$req = 'UPDATE Usagers SET nom_usager="'.$nom.'",statut="'.$statut.'", prenom_usager="'.$prenom.'", telephone_usager="'.$numero.'", email_usager="'.$email.'", mdp_usager="'.$mdp.'", modele_vehicule="'.$model.'", photo_usager="'.$nouvelleImage.'" WHERE id_usager='.$id ;
+//echo $req;
 $resultat=$mabd->query($req);
+echo '<h2>Votre modification a bien était enregistée ! </h2>';
+header("refresh:2;url=Usagers_gestion.php");
 ?>
-</tbody>
-</table>
 </body>
 </html>
