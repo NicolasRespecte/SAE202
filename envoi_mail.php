@@ -67,7 +67,7 @@ if (mail($email_dest,$subject,$message,$headers)) {
 //mail de confirmation
 $to=$email;
 $subject='SAE202 : demande de '.$prenom.' '.$nom;
-$message ="Bonjour $prenom $nom,\n\n$demande.";
+$message ="Bonjour $prenom $nom,\n\n j'ai bien pris en compte votre demande. Je reviens vers vous dans les plus bref délais.";
 $headers['From']='mmi22e12@mmi-troyes.fr';
 $headers['Reply-to']='no-reply@mmi-troyes.fr';
 $headers['X-Mailer']='PHP/'.phpversion();
