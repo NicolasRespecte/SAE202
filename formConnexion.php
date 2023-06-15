@@ -20,7 +20,9 @@
     </div>
     <p class="ins">Vous n'avez pas encore de compte ? <a href="formInscription.php">Inscrivez vous !</a></p>
     <input id="env" type="submit" value="Connexion"> 
-</form> 
+</form>
+
+
 <?php
 if (!empty($_SESSION['erreur'])) {
     echo $_SESSION['erreur'];
@@ -29,4 +31,4 @@ if (!empty($_SESSION['erreur'])) {
     //var_dump($_SESSION);
 ?>
 </main>
-<?php require 'fin.php' ;?>
+    <?php require 'fin.php' ;?>

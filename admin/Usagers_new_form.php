@@ -1,9 +1,9 @@
 <?php require '../debut2.php'; require_once '../lib.inc.php';?>
-<?php require '../header.inc.php'; ?>
-
+<?php require 'header-admin.php'; ?>
+<main>
 <h1>Gestion des Usagers</h1>
 <p>Ajouter un usager ici</p>
-<hr>
+
 <form action="Usagers_new_valide.php" method="post" enctype="multipart/form-data">
 
         <div class="troischamp">
@@ -71,7 +71,5 @@
 		$req = "SELECT * FROM  Usagers ";
 ?>
 
-</tbody>
-</table>
-</body>
-</html>
+</main>
+<?php require '../fin.php' ;?>

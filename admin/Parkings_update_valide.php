@@ -1,5 +1,5 @@
 <?php require '../debut2.php'; require_once '../lib.inc.php';?>
-<?php require '../header.inc.php'; ?>	
+<?php require 'header-admin.php'; ?>
 
 <h1>Gestion des Parking</h1>
 <h2>Vous venez de modifier</h2>
