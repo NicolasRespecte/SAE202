@@ -394,7 +394,7 @@ form label{
   flex-direction: column;
   max-width: 480px;
   height: 520px;
-  background-color: aqua;
+  background-color: rgb(255, 255, 255, 0.8);
   padding: 20px;
   border-radius: 20px;
   gap: 15px;
@@ -495,9 +495,12 @@ form label{
   }
   .pasco{
     display: none;
-}
+  }
   .Accueil{
     margin: 25px;
+  }
+  .bb{
+    font-size: 12px;
   }
 }
 @media (max-width: 480px) {

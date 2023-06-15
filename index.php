@@ -8,7 +8,7 @@
         <p>Ride&Co n'est pas seulement une application de covoiturage ordinaire, mais elle est exclusivement réservée aux étudiants et aux professeurs de la filière MMI. Pourquoi cibler spécifiquement cette filière ? Tout simplement pour favoriser la création de liens entre les étudiants de différents niveaux et assurer la sécurité de tous.</p>
         <div>
             <a href="formConnexion.php"><input id="env" type="submit" value="Connexion"></a>
-            <a href="formInscription.php"><input id="env" type="submit" value="Incription"></a>
+            <a href="formInscription.php"><input id="env" type="submit" value="Inscription"></a>
         </div>
     </div>
     <div class="Aforme">
