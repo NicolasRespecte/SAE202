@@ -12,24 +12,13 @@ $ligne = $resultat->fetch(PDO::FETCH_ASSOC);  // dans $album on a les infos de l
 
 
 ?>
-
-<form action="user/validmodif.php" method="post" enctype="multipart/form-data">
-
-<input type="hidden" name="id" value="<?php echo $ligne['id_usager'] ?>" >
-Nom:<input type="text" name="nom" value="<?php echo $ligne['nom_usager'] ?>" ><br>
-Prénom:<input type="text" name="prenom" value="<?php echo $ligne['prenom_usager'] ?>"><br>
-Email:<input type="email" name="email" value="<?php echo $ligne['email_usager'] ?>"><br>
-Téléphone:<input type="text" name="num" value="<?php echo $ligne['telephone_usager'] ?>"><br>
-Modèle Véhicule:<input type="text" name="model" value="<?php echo $ligne['modele_vehicule'] ?>"><br>
-<!-- Photo : <input type="file" name="photo"/><br /> -->
-    <input id="env" type="submit" value="Envoyer"> 
 </form> 
 
 <main>
             <h1>Profil</h1>
             
-            <form action="modifProfil.php" method="post" enctype="multipart/form-data">
-            
+            <form action="user/validmodif.php" method="post" enctype="multipart/form-data">
+                    <input type="hidden" name="id" value="<?php echo $ligne['id_usager'] ?>" >
                     <div class="troischamp">
             
                         <div class="champgauche">
@@ -76,22 +65,18 @@ Modèle Véhicule:<input type="text" name="model" value="<?php echo $ligne['mode
             
                      <div class="champ">
                         <label for="statut">Statut</label>
-                        '.$ligne['statut'].'
+                        <select value="<?php echo $ligne['statut'] ?>" name="statut"><option>Etudiant</option><option>Professeur</option></select>
                         <span class="ligne"></span>
                     </div>
             
                     <div class="champ">
                         <label for="model">Voiture</label>
-                        '.$ligne['modele_vehicule'].'
+                        <input type="text" name="model" value="<?php echo $ligne['modele_vehicule'] ?>">
                         <span class="ligne"></span>
                     </div>
             
-                    <input id="env" type="submit" value="Modifier">
-                    </form>
-                    <form action="suppProfil.php" method="post" enctype="multipart/form-data">
-                    <input id="env" type="submit" value="Supprimer"> 
-            
-                </form> 
+                    <input id="env" type="submit" value="Valider"> 
+                    </form> 
             </main>
 
 

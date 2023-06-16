@@ -4,7 +4,7 @@
 		$mabd = connexionBD();
 		$req = "SELECT * FROM  Reservation ";
 ?>
-
+<body class="TraBg">
 <main>
 <h1>Gestion des Réservations</h1>
 <p>Ajouter une réservation ici</p>
@@ -27,6 +27,8 @@
             <input type="text" name="idt" placeholder="N° du trajet" required="" /><br />
         <span class="ligne"></span>
     </div>
+
+    <p class="ins">Merci, vous contribuez au bien vivre des étudient de MMI !</p>
 
     <input id="env" type="submit" name="ajouter">
     

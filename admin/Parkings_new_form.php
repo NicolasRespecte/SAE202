@@ -1,5 +1,6 @@
 <?php require '../debut2.php'; require_once '../lib.inc.php';?>
 <?php require 'header-admin.php'; ?>    
+<body class="ParPar">
     <?php
 		$mabd = connexionBD();
 		$req = "SELECT * FROM  Parking ";
@@ -27,6 +28,8 @@
             <input type="text" name="iframe" placeholder="Iframe" required="" /><br />
         <span class="ligne"></span>
     </div>
+
+    <p class="ins">Vous avez envie voir ce que ca donne ? <a href="../Parkings.php">Allez voir !</a></p>
 
     <input id="env" type="submit" name="ajouter">
     

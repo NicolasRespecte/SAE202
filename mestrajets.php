@@ -3,15 +3,14 @@ require 'debut.php';
 require_once 'lib.inc.php';
 require 'header.inc.php';
 ?>
+<body class="TraBg">
 <main>
-    <h1>Mes Trajets</h1>
-
     <?php
     $mabd = connexionBD();
     $req = "SELECT * FROM Reservation INNER JOIN Trajet ON Reservation.id_trajet = Trajet.id_trajet WHERE Reservation.id_usager = '" . $_SESSION['id_usager'] . "'";
     $resultat = $mabd->query($req)->fetchAll(PDO::FETCH_ASSOC);
 
-    echo '<p>Trajets Réservés :</p>';
+    echo '<h1>Trajets Réservés :</h1>';
 
     if (count($resultat) > 0) {
         foreach ($resultat as $ligne) {
@@ -37,7 +36,7 @@ require 'header.inc.php';
     $req = "SELECT * FROM Trajet WHERE id_usager = '" . $_SESSION['id_usager'] . "'";
     $resultat = $mabd->query($req)->fetchAll(PDO::FETCH_ASSOC);
 
-    echo '<p>Trajets Proposés :</p>';
+    echo '<h1>Trajets Proposés :</h1>';
 
     if (count($resultat) > 0) {
         foreach ($resultat as $ligne) {

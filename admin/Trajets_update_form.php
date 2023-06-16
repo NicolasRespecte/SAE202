@@ -1,6 +1,7 @@
 <?php require '../debut2.php'; require_once '../lib.inc.php';?>
 <?php require 'header-admin.php'; ?>
-
+<body class="TraBg">
+<main>
 <h1>Gestion des Trajets</h1>
 <h2>Modification du trajet</h2>
 <?php
@@ -69,7 +70,12 @@ $ligne = $resultat->fetch(PDO::FETCH_ASSOC);  // dans $album on a les infos de l
                 <span class="ligne"></span>
             </div>
         </div>
-        <input type="submit" name="ajouter">
+        <p class="ins">Vous avez envie voir ce que ca donne ? <a href="../formRechercheTrajet.php">Allez voir !</a></p>
+        </div>
+        </div>
+        </div>
+        </div>
+        <input  id="env" type="submit" name="ajouter">
 </form>
 <?php
 if (!empty($_SESSION['erreur'])) {
@@ -78,5 +84,6 @@ if (!empty($_SESSION['erreur'])) {
     }
     //var_dump($_SESSION);
 ?>
+</main>
 </body>
 </html>

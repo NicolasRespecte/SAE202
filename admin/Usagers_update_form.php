@@ -1,6 +1,6 @@
 <?php require '../debut2.php'; require_once '../lib.inc.php';?>
 <?php require 'header-admin.php'; ?>
-
+<main>
 <h1>Gestion des Usagers</h1>
 <h2>Modification de l'usager</h2>
 <?php
@@ -81,5 +81,6 @@ if (!empty($_SESSION['erreur'])) {
     }
     //var_dump($_SESSION);
 ?>
+</main>
 </body>
 </html>

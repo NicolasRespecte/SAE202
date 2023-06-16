@@ -1,6 +1,6 @@
 <?php require 'debut.php'; require_once 'lib.inc.php';?>
 <?php require 'header.inc.php' ?>
-
+<body class="ConBG">
 <main>
 <h1>Contact</h1>
 

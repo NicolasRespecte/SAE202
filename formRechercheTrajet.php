@@ -1,5 +1,7 @@
 <?php require 'debut.php'; require_once 'lib.inc.php';?>
 <?php require 'header.inc.php'; ?>
+<body class="TraBg">
+<main>
 <div class="container">
 <form action="resultatRechercheTrajet.php" method="post" enctype="multipart/form-data">
 
@@ -39,3 +41,5 @@
 <input id="env" type="submit" value="Chercher">
 </form>
 </div>
+</main>
+<?php require 'fin.php' ;?>

@@ -66,6 +66,11 @@ $ligne = $resultat->fetch(PDO::FETCH_ASSOC);
                 <span class="ligne"></span>
             </div>
         </div>
+        <p class="ins">Merci, vous contribuez au bien vivre des étudient de MMI !</p>
+        </div>
+        </div>
+        </div>
+        </div>
         <input id="env" type="submit" value="Ajouter">
 </form>
 </main>

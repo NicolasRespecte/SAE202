@@ -5,12 +5,27 @@
     font-family: 'Montserrat', sans-serif;
   }
   body{
+    background-color: #F8F8F8;
+  }
+  .ParPar{
+    background: url(../imgs/parkingss.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+  .AccuBG{
     background: url(../imgs/accueil.svg);
     background-size: cover;
     background-repeat: no-repeat;
   }
-  .ParPar{
-    background: url(../imgs/parkingss.svg);
+  .TraBg{
+    background: url(../imgs/trajet.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+  .ConBG{
+    background: url(../imgs/contact.svg);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -249,10 +264,13 @@ h1{
   padding: 20px;
   margin: 50px;
   min-width: 450px;
-  background-color: #fff;
+  background-color: rgb(255, 255, 255, 0.8);
   border-radius: 20px;
   opacity: 0.8;
   z-index: 1;
+}
+.Aforme form{
+  background-color: transparent;
 }
 
 .container{
@@ -271,6 +289,9 @@ form{
     gap: 40px;
     margin: 20px;
     align-items: center;
+    background-color: rgb(255, 255, 255, 0.8);  
+    border-radius: 20px;
+    padding: 20px;
 }
 form h2{
   font-size: 40px;
@@ -459,29 +480,35 @@ form label{
   text-align: center;
   margin-bottom: 20px;
 }
+.boite form{
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
+}
 .ville{
-  width: 30%;
+  width: 40%;
 }
 .villo{
-  width: 50%;
+  margin: 0px 10px;
 }
 .petite{
   width: 100%;
   display: flex;
+  justify-content: space-between;
   gap: 10px;
-  font-size: 12px;
+  font-size: 18px;
 }
 .tra{
   margin-top: 10px;
   width: 100%;
   display: flex;
   gap: 10px;
-  font-size: 15px;
+  font-size: 24px;
 }
 .DéAr{
   width: 100%;
   display: flex;
-  font-size: 14px;
+  font-size: 18px;
 }
 .Départt{
   display: flex;
@@ -523,13 +550,75 @@ form label{
 }
 
 .barre {
-  width: 90px;
+  width: 85%;
   height: 8px;
   background-color: #F8F8F8;
   position: absolute;
   top: 8px;
   left: 10px;
   transform: translateY(-50%);
+}
+.boiStats{
+  display: flex;
+  margin: 15px;
+  font-size: 20px;
+  gap: 20px;
+}
+.toigauche{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.TUsa{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 300px;
+  border-radius: 20px;
+  background-color: #1e3557;
+  gap: 10px;
+  color: #F8F8F8;
+}
+.TUsa span{
+  font-size: 70px;
+  color: #ff6600;
+}
+.long{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 300px;
+  height: 620px;
+  border-radius: 20px;
+  background-color: #1e3557;
+  gap: 10px;
+  color: #F8F8F8;
+  text-align: center;
+}
+.long span{
+  font-size: 70px;
+  color: #ff6600;
+}
+.champion{
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 620px;
+  margin: 0px 20px;
+  height: 250px;
+  border-radius: 20px;
+  background-color: #1e3557;
+  color: #F8F8F8;
+  text-align: center;
+  font-size: 20px;
+}
+.champion span{
+  font-size: 40px;
+  color: #ff6600;
 }
 
 @media (max-width: 1150px) {
@@ -545,10 +634,23 @@ form label{
   .Atexte div{
     justify-content: center;
   }
+  .tra{
+      font-size: 17px;
+  }
+  .petite {
+    font-size: 15px;
+  }
+  .DéAr {
+    font-size: 14px;
+  }
+
 }
 @media (max-width: 780px) {
   .menu-button-container {
     display: flex;
+  }
+  .boiStats{
+    flex-direction: column;
   }
   .menu {
     position: absolute;

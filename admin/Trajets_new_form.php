@@ -1,6 +1,7 @@
 <?php require '../debut2.php'; require_once '../lib.inc.php';?>
 <?php require 'header-admin.php'; ?>
-
+<body class="TraBg">
+<main>
 <h1>Gestion des Trajets</h1>
 <p>Ajouter un trajet ici</p>
 <form action="Trajets_new_valide.php" method="POST" enctype="multipart/form-data">
@@ -58,12 +59,18 @@
                 <span class="ligne"></span>
             </div>
         </div>
-        <input type="submit" name="ajouter">
+        <p class="ins">Vous avez envie voir ce que ca donne ? <a href="../formRechercheTrajet.php">Allez voir !</a></p>
+        </div>
+        </div>
+        </div>
+        </div>
+        <input id="env" type="submit" name="ajouter">
 </form>
 
    <?php
 		$mabd = connexionBD();
 		$req = "SELECT * FROM  Trajet ";
 ?>
+</main>
 </body>
 </html>

@@ -1,6 +1,6 @@
 <?php require '../debut2.php'; require_once '../lib.inc.php';?>
 <?php require 'header-admin.php'; ?>
-
+<body class="TraBg">
 <?php
 $num = $_GET['num'];
 $mabd = connexionBD();
@@ -29,6 +29,8 @@ $ligne = $resultat->fetch(PDO::FETCH_ASSOC);
             <input type="text" name="idt" value="<?php echo $ligne['id_trajet'] ?>" required="" /><br />
         <span class="ligne"></span>
     </div>
+
+    <p class="ins">Merci, vous contribuez au bien vivre des étudient de MMI !</p>
 
     <input id="env" type="submit" value="Envoyer"> 
     

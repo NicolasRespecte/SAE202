@@ -1,6 +1,6 @@
 <?php require '../debut2.php'; require_once '../lib.inc.php';?>
 <?php require 'header-admin.php'; ?>
-
+<body class="ParPar">
 <?php
 $num = $_GET['num'];
 $mabd = connexionBD();

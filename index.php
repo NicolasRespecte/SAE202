@@ -1,6 +1,6 @@
 <?php require 'debut.php'; require_once 'lib.inc.php';?>
 <?php require 'header.inc.php' ?>
-
+<body class="AccuBG">
 <div class="Accueil">
     <div class="Atexte">
         <h1>Ride & Co</h1>

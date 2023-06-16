@@ -1,5 +1,6 @@
 <?php require '../debut2.php'; require_once '../lib.inc.php';?>
 <?php require 'header-admin.php'; ?>
+<body class="ParPar">
 <main>	
 <h1>Gestion des Parkings</h1>
 
